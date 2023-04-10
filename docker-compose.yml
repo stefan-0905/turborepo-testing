@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  lambda-consumer-1:
+    container_name: lambda-consumer-1
+    build:
+      context: .
+      dockerfile: ./apps/lambda-consumer-1/Dockerfile
+  lambda-consumer-2:
+    container_name: lambda-consumer-2
+    build:
+      context: .
+      dockerfile: ./apps/lambda-consumer-2/Dockerfile
