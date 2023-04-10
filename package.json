@@ -1,5 +1,5 @@
 {
-  "name": "notifications",
+  "name": "turborepo-testing",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -16,15 +16,7 @@
   "devDependencies": {
     "eslint-config-custom-server": "*",
     "prettier": "latest",
-    "turbo": "latest",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "eslint": "^7.23.0",
-    "eslint-config-next": "13.0.0",
-    "eslint-plugin-react": "7.31.8",
-    "eslint-config-turbo": "latest",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-prettier": "^4.2.1"
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=16.0.0"

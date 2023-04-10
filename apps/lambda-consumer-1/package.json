@@ -7,7 +7,7 @@
     "dev": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "build": "tsc",
-    "lint": "tsc --noEmit && eslint ."
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,9 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.114",
     "eslint": "^8.38.0",
-    "typescript": "^5.0.4"
+    "eslint-config-custom-server": "*",
+    "typescript": "^5.0.4",
+    "tsconfig": "*"
   },
   "dependencies": {
     "@aws-sdk/client-lambda": "^3.309.0",
