@@ -12,6 +12,7 @@ on:
       - main
 jobs:
   build:
+    name: Building lambda-consumer-1
     runs-on: ubuntu-latest
     strategy:
       matrix:
