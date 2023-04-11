@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'apps/lambda-consumer-1/**'
+      - '.github/workflows/lambda-consumer-1/continuous-integration'
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{matrix.node-version}}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.node-version}}
+          cache: 'npm'
+      - name: Install
+        run: npm ci --prefer-offline --no-audit
+      - name: Run lint check
+        run: turbo run lint --filter=lambda-consumer-1
