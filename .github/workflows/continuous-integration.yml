@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'apps/lambda-consumer-1/**'
-      - '.github/workflows/lambda-consumer-1/continuous-integration'
+      - apps/lambda-consumer-1/**
+      - .github/workflows/lambda-consumer-1/continuous-integration
   push:
     branches:
       - main
