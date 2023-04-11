@@ -13,7 +13,7 @@ on:
 jobs:
   build:
     name: Building lambda-consumer-1
-    runs- on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
