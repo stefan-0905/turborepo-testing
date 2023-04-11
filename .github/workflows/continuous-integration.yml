@@ -5,15 +5,15 @@ on:
     branches:
       - main
     paths:
-      - 'apps/lambda-consumer-1/**'
-      - '.github/workflows/lambda-consumer-1/continuous-integration'
+      - apps/lambda-consumer-1/**
+      - .github/workflows/lambda-consumer-1/continuous-integration
   push:
     branches:
       - main
 jobs:
   build:
     name: Building lambda-consumer-1
-    runs- on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -25,4 +25,4 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Run lint check
-        run: turbo run lint --filter=lambda-consumer-1
+        run: npx turbo run lint --filter=lambda-consumer-1
