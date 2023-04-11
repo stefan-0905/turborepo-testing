@@ -4,9 +4,9 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'apps/lambda-consumer-1/**'
-      - '.github/workflows/lambda-consumer-1/continuous-integration'
+    # paths:
+    #   - 'apps/lambda-consumer-1/**'
+    #   - '.github/workflows/lambda-consumer-1/continuous-integration'
   push:
     branches:
       - main
@@ -25,4 +25,4 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Run lint check
-        run: turbo run lint --filter=lambda-consumer-1
+        run: npx turbo run lint --filter=lambda-consumer-1
