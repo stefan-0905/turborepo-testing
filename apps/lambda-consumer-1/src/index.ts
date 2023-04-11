@@ -7,4 +7,4 @@ export const handler: Handler = async (event, context) => {
 
 axios.get('https://google.com').then((e) => console.log(e.headers));
 
-console.log('Hello World and CI! 1');
+console.log('CI rules!');
